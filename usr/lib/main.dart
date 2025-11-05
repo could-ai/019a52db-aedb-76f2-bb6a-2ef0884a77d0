@@ -1,6 +1,11 @@
-import "package:flutter/material.dart";
-import "package:couldai_user_app/screens/home_screen.dart";
-import "package:supabase_flutter/supabase_flutter.dart";
+import 'package:flutter/material.dart';
+import 'package:couldai_user_app/screens/home_screen.dart';
+import 'package:couldai_user_app/screens/courses_screen.dart';
+import 'package:couldai_user_app/screens/tests_screen.dart';
+import 'package:couldai_user_app/screens/live_classes_screen.dart';
+import 'package:couldai_user_app/screens/chat_screen.dart';
+import 'package:couldai_user_app/screens/profile_screen.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +41,15 @@ class MyApp extends StatelessWidget {
         fontFamily: "Roboto",
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/courses': (context) => const CoursesScreen(),
+        '/tests': (context) => const TestsScreen(),
+        '/live': (context) => const LiveClassesScreen(),
+        '/chat': (context) => const ChatScreen(),
+        '/profile': (context) => const ProfileScreen(),
+      },
     );
   }
 }

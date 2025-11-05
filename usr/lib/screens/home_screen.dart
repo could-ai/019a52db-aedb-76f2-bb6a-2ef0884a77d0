@@ -48,7 +48,17 @@ class HomeScreen extends StatelessWidget {
         ],
         currentIndex: 0,
         onTap: (index) {
-          // Handle navigation
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/courses');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/tests');
+              break;
+          }
         },
       ),
     );
@@ -62,7 +72,7 @@ class HomeScreen extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          // Navigator.pushNamed(context, route);
+          Navigator.pushNamed(context, route);
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
