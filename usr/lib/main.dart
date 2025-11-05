@@ -1,7 +1,17 @@
 import "package:flutter/material.dart";
 import "package:couldai_user_app/screens/home_screen.dart";
+import "package:supabase_flutter/supabase_flutter.dart";
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    // TODO: Replace with your Supabase project URL
+    url: "YOUR_SUPABASE_URL",
+    // TODO: Replace with your Supabase anon key
+    anonKey: "YOUR_SUPABASE_ANON_KEY",
+  );
+
   runApp(const MyApp());
 }
 
