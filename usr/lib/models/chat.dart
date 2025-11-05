@@ -1,3 +1,5 @@
+import 'package:couldai_user_app/models/teacher.dart';
+
 class Chat {
   final String id;
   final Teacher teacher;
@@ -61,7 +63,7 @@ class GroupChat {
       members: json['members'],
       lastMessage: json['last_message'],
       timestamp: json['timestamp'],
-      is_unread': json['is_unread'],
+      isUnread: json['is_unread'],
     );
   }
 

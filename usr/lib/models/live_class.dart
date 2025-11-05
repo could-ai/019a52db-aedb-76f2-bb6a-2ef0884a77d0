@@ -1,3 +1,5 @@
+import 'package:couldai_user_app/models/teacher.dart';
+
 class LiveClass {
   final String id;
   final String title;

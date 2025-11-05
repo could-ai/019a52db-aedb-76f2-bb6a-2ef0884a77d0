@@ -1,3 +1,5 @@
+import 'package:couldai_user_app/models/course.dart';
+
 class Enrollment {
   final String id;
   final String userId;

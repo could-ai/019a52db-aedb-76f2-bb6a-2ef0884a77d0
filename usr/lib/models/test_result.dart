@@ -1,3 +1,5 @@
+import 'package:couldai_user_app/models/test.dart';
+
 class TestResult {
   final String id;
   final Test test;
